@@ -1,11 +1,11 @@
 #!/bin/bash
-DATASET_NAME="CUHK-PEDES"
+DATASET_NAME="VN3K"
 
 CUDA_VISIBLE_DEVICES=0 \
 python train.py \
 --name iira \
 --img_aug \
---batch_size 64 \
+--batch_size 8 \
 --MLM \
 --dataset_name $DATASET_NAME \
 --loss_names 'sdm+mlm+id' \
