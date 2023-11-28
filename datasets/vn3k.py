@@ -1,4 +1,3 @@
-from ast import literal_eval
 import os.path as op
 from typing import List
 
@@ -53,7 +52,7 @@ class VN3K(BaseDataset):
                 pid = int(anno['id'])
                 pid_container.add(pid)
                 img_path = op.join(self.img_dir, anno['file_path'])
-                captions = literal_eval(anno['en_captions']) # caption list
+                captions = anno['en_captions'] # caption list
                 for caption in captions:
                     dataset.append((pid, image_id, img_path, caption))
                 image_id += 1
@@ -73,7 +72,7 @@ class VN3K(BaseDataset):
                 img_path = op.join(self.img_dir, anno['file_path'])
                 img_paths.append(img_path)
                 image_pids.append(pid)
-                caption_list = literal_eval(anno['en_captions']) # caption list
+                caption_list = anno['en_captions'] # caption list
                 for caption in caption_list:
                     captions.append(caption)
                     caption_pids.append(pid)
