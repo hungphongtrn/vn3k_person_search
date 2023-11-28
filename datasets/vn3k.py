@@ -49,7 +49,7 @@ class VN3K(BaseDataset):
             dataset = []
             image_id = 0
             for anno in annos:
-                pid = int(anno['id'])
+                pid = int(anno['id']-1)
                 pid_container.add(pid)
                 img_path = op.join(self.img_dir, anno['file_path'])
                 captions = anno['en_captions'] # caption list
@@ -67,7 +67,7 @@ class VN3K(BaseDataset):
             image_pids = []
             caption_pids = []
             for anno in annos:
-                pid = int(anno['id'])
+                pid = int(anno['id']-1)
                 pid_container.add(pid)
                 img_path = op.join(self.img_dir, anno['file_path'])
                 img_paths.append(img_path)
