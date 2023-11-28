@@ -13,8 +13,9 @@ from .bases import ImageDataset, TextDataset, ImageTextDataset, ImageTextMLMData
 from .cuhkpedes import CUHKPEDES
 from .icfgpedes import ICFGPEDES
 from .rstpreid import RSTPReid
+from .vn3k import VN3K
 
-__factory = {'CUHK-PEDES': CUHKPEDES, 'ICFG-PEDES': ICFGPEDES, 'RSTPReid': RSTPReid}
+__factory = {'CUHK-PEDES': CUHKPEDES, 'ICFG-PEDES': ICFGPEDES, 'RSTPReid': RSTPReid, "VN3K": VN3K}
 
 
 def build_transforms(img_size=(384, 128), aug=False, is_train=True):
