@@ -120,8 +120,8 @@ class Evaluator:
             text += f"Length: text_ids: {len(qids)} - image_ids: {len(gids)} \n"
             iterer = iter(self.txt_loader)
             for i in range(indices.shape[0]):
-                text += f"Description: {iterer[1]} - Image Rank: {indices[i]} \n"
-                iterer = next(iterer)
+                _, caption = next(iterer)
+                text += f"Description: {caption} - Image Rank: {indices[i]} \n"
             self.logger.info("Length of all lines: {}".format(len(text.split("\n"))-1))
 
             f.write(text)
