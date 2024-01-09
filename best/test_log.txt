@@ -1,0 +1,140 @@
+2024-01-09 08:38:35,456 IRRA INFO: {'MLM': True, 'alpha': 0.9, 'batch_size': 64, 'beta': 0.999, 'bias_lr_factor': 2.0, 'cmt_depth': 4, 'dataset_name': 'VN3K', 'distributed': False, 'eval_period': 1, 'gamma': 0.1, 'id_loss_weight': 1.0, 'img_aug': True, 'img_size': [384, 128], 'local_rank': 0, 'log_period': 100, 'loss_names': 'sdm+mlm+id', 'lr': 1e-05, 'lr_factor': 5.0, 'lrscheduler': 'cosine', 'masked_token_rate': 0.8, 'masked_token_unchanged_rate': 0.1, 'milestones': [20, 50], 'mlm_loss_weight': 1.0, 'momentum': 0.9, 'name': 'iira', 'num_epoch': 60, 'num_instance': 4, 'num_workers': 8, 'optimizer': 'Adam', 'output_dir': 'best', 'power': 0.9, 'pretrain_choice': 'ViT-B/16', 'resume': False, 'resume_ckpt_file': '', 'root_dir': '.', 'sampler': 'random', 'stride_size': 16, 'target_lr': 0, 'temperature': 0.02, 'test_batch_size': 512, 'text_length': 77, 'training': False, 'val_dataset': 'test', 'vocab_size': 49408, 'warmup_epochs': 5, 'warmup_factor': 0.1, 'warmup_method': 'linear', 'weight_decay': 4e-05, 'weight_decay_bias': 0.0}
+2024-01-09 08:38:35,520 IRRA.dataset INFO: => VN3K Images and Captions are loaded
+2024-01-09 08:38:35,520 IRRA.dataset INFO: VN3K Dataset statistics:
+2024-01-09 08:38:35,520 IRRA.dataset INFO: 
++--------+------+--------+----------+
+| subset | ids  | images | captions |
++--------+------+--------+----------+
+| train  | 2000 |  4302  |   8604   |
+|  test  | 1000 |  2000  |   4000   |
+|  val   |  0   |   0    |    0     |
++--------+------+--------+----------+
+2024-01-09 08:38:36,600 IRRA.model INFO: Load pretrained ViT-B/16 CLIP model with model config: {'embed_dim': 512, 'image_resolution': [384, 128], 'vision_layers': 12, 'vision_width': 768, 'vision_patch_size': 16, 'context_length': 77, 'vocab_size': 49408, 'transformer_width': 512, 'transformer_heads': 8, 'transformer_layers': 12, 'stride_size': 16}
+2024-01-09 08:38:39,659 IRRA.test INFO: Enter inferencing
+2024-01-09 08:38:50,049 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 50.600 | 77.650 | 85.525 | 56.082 | 49.663 |
++------+--------+--------+--------+--------+--------+
+2024-01-09 08:39:31,659 IRRA INFO: {'MLM': True, 'alpha': 0.9, 'batch_size': 64, 'beta': 0.999, 'bias_lr_factor': 2.0, 'cmt_depth': 4, 'dataset_name': 'VN3K', 'distributed': False, 'eval_period': 1, 'gamma': 0.1, 'id_loss_weight': 1.0, 'img_aug': True, 'img_size': [384, 128], 'local_rank': 0, 'log_period': 100, 'loss_names': 'sdm+mlm+id', 'lr': 1e-05, 'lr_factor': 5.0, 'lrscheduler': 'cosine', 'masked_token_rate': 0.8, 'masked_token_unchanged_rate': 0.1, 'milestones': [20, 50], 'mlm_loss_weight': 1.0, 'momentum': 0.9, 'name': 'iira', 'num_epoch': 60, 'num_instance': 4, 'num_workers': 8, 'optimizer': 'Adam', 'output_dir': 'best', 'power': 0.9, 'pretrain_choice': 'ViT-B/16', 'resume': False, 'resume_ckpt_file': '', 'root_dir': '.', 'sampler': 'random', 'stride_size': 16, 'target_lr': 0, 'temperature': 0.02, 'test_batch_size': 512, 'text_length': 77, 'training': False, 'val_dataset': 'test', 'vocab_size': 49408, 'warmup_epochs': 5, 'warmup_factor': 0.1, 'warmup_method': 'linear', 'weight_decay': 4e-05, 'weight_decay_bias': 0.0}
+2024-01-09 08:39:31,733 IRRA.dataset INFO: => VN3K Images and Captions are loaded
+2024-01-09 08:39:31,733 IRRA.dataset INFO: VN3K Dataset statistics:
+2024-01-09 08:39:31,734 IRRA.dataset INFO: 
++--------+------+--------+----------+
+| subset | ids  | images | captions |
++--------+------+--------+----------+
+| train  | 2000 |  4302  |   8604   |
+|  test  | 1000 |  2000  |   4000   |
+|  val   |  0   |   0    |    0     |
++--------+------+--------+----------+
+2024-01-09 08:39:32,816 IRRA.model INFO: Load pretrained ViT-B/16 CLIP model with model config: {'embed_dim': 512, 'image_resolution': [384, 128], 'vision_layers': 12, 'vision_width': 768, 'vision_patch_size': 16, 'context_length': 77, 'vocab_size': 49408, 'transformer_width': 512, 'transformer_heads': 8, 'transformer_layers': 12, 'stride_size': 16}
+2024-01-09 08:39:35,573 IRRA.test INFO: Enter inferencing
+2024-01-09 08:39:45,318 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 50.600 | 77.650 | 85.525 | 56.082 | 49.663 |
++------+--------+--------+--------+--------+--------+
+2024-01-09 08:43:07,999 IRRA INFO: {'MLM': True, 'alpha': 0.9, 'batch_size': 64, 'beta': 0.999, 'bias_lr_factor': 2.0, 'cmt_depth': 4, 'dataset_name': 'VN3K', 'distributed': False, 'eval_period': 1, 'gamma': 0.1, 'id_loss_weight': 1.0, 'img_aug': True, 'img_size': [384, 128], 'local_rank': 0, 'log_period': 100, 'loss_names': 'sdm+mlm+id', 'lr': 1e-05, 'lr_factor': 5.0, 'lrscheduler': 'cosine', 'masked_token_rate': 0.8, 'masked_token_unchanged_rate': 0.1, 'milestones': [20, 50], 'mlm_loss_weight': 1.0, 'momentum': 0.9, 'name': 'iira', 'num_epoch': 60, 'num_instance': 4, 'num_workers': 8, 'optimizer': 'Adam', 'output_dir': 'best', 'power': 0.9, 'pretrain_choice': 'ViT-B/16', 'resume': False, 'resume_ckpt_file': '', 'root_dir': '.', 'sampler': 'random', 'stride_size': 16, 'target_lr': 0, 'temperature': 0.02, 'test_batch_size': 512, 'text_length': 77, 'training': False, 'val_dataset': 'test', 'vocab_size': 49408, 'warmup_epochs': 5, 'warmup_factor': 0.1, 'warmup_method': 'linear', 'weight_decay': 4e-05, 'weight_decay_bias': 0.0}
+2024-01-09 08:43:08,066 IRRA.dataset INFO: => VN3K Images and Captions are loaded
+2024-01-09 08:43:08,066 IRRA.dataset INFO: VN3K Dataset statistics:
+2024-01-09 08:43:08,066 IRRA.dataset INFO: 
++--------+------+--------+----------+
+| subset | ids  | images | captions |
++--------+------+--------+----------+
+| train  | 2000 |  4302  |   8604   |
+|  test  | 1000 |  2000  |   4000   |
+|  val   |  0   |   0    |    0     |
++--------+------+--------+----------+
+2024-01-09 08:43:09,144 IRRA.model INFO: Load pretrained ViT-B/16 CLIP model with model config: {'embed_dim': 512, 'image_resolution': [384, 128], 'vision_layers': 12, 'vision_width': 768, 'vision_patch_size': 16, 'context_length': 77, 'vocab_size': 49408, 'transformer_width': 512, 'transformer_heads': 8, 'transformer_layers': 12, 'stride_size': 16}
+2024-01-09 08:43:11,858 IRRA.test INFO: Enter inferencing
+2024-01-09 08:43:21,638 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 50.600 | 77.650 | 85.525 | 56.082 | 49.663 |
++------+--------+--------+--------+--------+--------+
+2024-01-09 08:45:49,873 IRRA INFO: {'MLM': True, 'alpha': 0.9, 'batch_size': 64, 'beta': 0.999, 'bias_lr_factor': 2.0, 'cmt_depth': 4, 'dataset_name': 'VN3K', 'distributed': False, 'eval_period': 1, 'gamma': 0.1, 'id_loss_weight': 1.0, 'img_aug': True, 'img_size': [384, 128], 'local_rank': 0, 'log_period': 100, 'loss_names': 'sdm+mlm+id', 'lr': 1e-05, 'lr_factor': 5.0, 'lrscheduler': 'cosine', 'masked_token_rate': 0.8, 'masked_token_unchanged_rate': 0.1, 'milestones': [20, 50], 'mlm_loss_weight': 1.0, 'momentum': 0.9, 'name': 'iira', 'num_epoch': 60, 'num_instance': 4, 'num_workers': 8, 'optimizer': 'Adam', 'output_dir': 'best', 'power': 0.9, 'pretrain_choice': 'ViT-B/16', 'resume': False, 'resume_ckpt_file': '', 'root_dir': '.', 'sampler': 'random', 'stride_size': 16, 'target_lr': 0, 'temperature': 0.02, 'test_batch_size': 512, 'text_length': 77, 'training': False, 'val_dataset': 'test', 'vocab_size': 49408, 'warmup_epochs': 5, 'warmup_factor': 0.1, 'warmup_method': 'linear', 'weight_decay': 4e-05, 'weight_decay_bias': 0.0}
+2024-01-09 08:45:49,940 IRRA.dataset INFO: => VN3K Images and Captions are loaded
+2024-01-09 08:45:49,940 IRRA.dataset INFO: VN3K Dataset statistics:
+2024-01-09 08:45:49,940 IRRA.dataset INFO: 
++--------+------+--------+----------+
+| subset | ids  | images | captions |
++--------+------+--------+----------+
+| train  | 2000 |  4302  |   8604   |
+|  test  | 1000 |  2000  |   4000   |
+|  val   |  0   |   0    |    0     |
++--------+------+--------+----------+
+2024-01-09 08:45:51,014 IRRA.model INFO: Load pretrained ViT-B/16 CLIP model with model config: {'embed_dim': 512, 'image_resolution': [384, 128], 'vision_layers': 12, 'vision_width': 768, 'vision_patch_size': 16, 'context_length': 77, 'vocab_size': 49408, 'transformer_width': 512, 'transformer_heads': 8, 'transformer_layers': 12, 'stride_size': 16}
+2024-01-09 08:45:53,786 IRRA.test INFO: Enter inferencing
+2024-01-09 08:46:03,580 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 50.600 | 77.650 | 85.525 | 56.082 | 49.663 |
++------+--------+--------+--------+--------+--------+
+2024-01-09 08:48:57,240 IRRA INFO: {'MLM': True, 'alpha': 0.9, 'batch_size': 64, 'beta': 0.999, 'bias_lr_factor': 2.0, 'cmt_depth': 4, 'dataset_name': 'VN3K', 'distributed': False, 'eval_period': 1, 'gamma': 0.1, 'id_loss_weight': 1.0, 'img_aug': True, 'img_size': [384, 128], 'local_rank': 0, 'log_period': 100, 'loss_names': 'sdm+mlm+id', 'lr': 1e-05, 'lr_factor': 5.0, 'lrscheduler': 'cosine', 'masked_token_rate': 0.8, 'masked_token_unchanged_rate': 0.1, 'milestones': [20, 50], 'mlm_loss_weight': 1.0, 'momentum': 0.9, 'name': 'iira', 'num_epoch': 60, 'num_instance': 4, 'num_workers': 8, 'optimizer': 'Adam', 'output_dir': 'best', 'power': 0.9, 'pretrain_choice': 'ViT-B/16', 'resume': False, 'resume_ckpt_file': '', 'root_dir': '.', 'sampler': 'random', 'stride_size': 16, 'target_lr': 0, 'temperature': 0.02, 'test_batch_size': 512, 'text_length': 77, 'training': False, 'val_dataset': 'test', 'vocab_size': 49408, 'warmup_epochs': 5, 'warmup_factor': 0.1, 'warmup_method': 'linear', 'weight_decay': 4e-05, 'weight_decay_bias': 0.0}
+2024-01-09 08:48:57,307 IRRA.dataset INFO: => VN3K Images and Captions are loaded
+2024-01-09 08:48:57,307 IRRA.dataset INFO: VN3K Dataset statistics:
+2024-01-09 08:48:57,307 IRRA.dataset INFO: 
++--------+------+--------+----------+
+| subset | ids  | images | captions |
++--------+------+--------+----------+
+| train  | 2000 |  4302  |   8604   |
+|  test  | 1000 |  2000  |   4000   |
+|  val   |  0   |   0    |    0     |
++--------+------+--------+----------+
+2024-01-09 08:48:58,385 IRRA.model INFO: Load pretrained ViT-B/16 CLIP model with model config: {'embed_dim': 512, 'image_resolution': [384, 128], 'vision_layers': 12, 'vision_width': 768, 'vision_patch_size': 16, 'context_length': 77, 'vocab_size': 49408, 'transformer_width': 512, 'transformer_heads': 8, 'transformer_layers': 12, 'stride_size': 16}
+2024-01-09 08:49:01,149 IRRA.test INFO: Enter inferencing
+2024-01-09 08:49:10,922 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 50.600 | 77.650 | 85.525 | 56.082 | 49.663 |
++------+--------+--------+--------+--------+--------+
+2024-01-09 08:49:11,591 IRRA.eval INFO: Length of all lines: 4001
+2024-01-09 09:09:40,301 IRRA INFO: {'MLM': True, 'alpha': 0.9, 'batch_size': 64, 'beta': 0.999, 'bias_lr_factor': 2.0, 'cmt_depth': 4, 'dataset_name': 'VN3K', 'distributed': False, 'eval_period': 1, 'gamma': 0.1, 'id_loss_weight': 1.0, 'img_aug': True, 'img_size': [384, 128], 'local_rank': 0, 'log_period': 100, 'loss_names': 'sdm+mlm+id', 'lr': 1e-05, 'lr_factor': 5.0, 'lrscheduler': 'cosine', 'masked_token_rate': 0.8, 'masked_token_unchanged_rate': 0.1, 'milestones': [20, 50], 'mlm_loss_weight': 1.0, 'momentum': 0.9, 'name': 'iira', 'num_epoch': 60, 'num_instance': 4, 'num_workers': 8, 'optimizer': 'Adam', 'output_dir': 'best', 'power': 0.9, 'pretrain_choice': 'ViT-B/16', 'resume': False, 'resume_ckpt_file': '', 'root_dir': '.', 'sampler': 'random', 'stride_size': 16, 'target_lr': 0, 'temperature': 0.02, 'test_batch_size': 512, 'text_length': 77, 'training': False, 'val_dataset': 'test', 'vocab_size': 49408, 'warmup_epochs': 5, 'warmup_factor': 0.1, 'warmup_method': 'linear', 'weight_decay': 4e-05, 'weight_decay_bias': 0.0}
+2024-01-09 09:09:40,369 IRRA.dataset INFO: => VN3K Images and Captions are loaded
+2024-01-09 09:09:40,369 IRRA.dataset INFO: VN3K Dataset statistics:
+2024-01-09 09:09:40,369 IRRA.dataset INFO: 
++--------+------+--------+----------+
+| subset | ids  | images | captions |
++--------+------+--------+----------+
+| train  | 2000 |  4302  |   8604   |
+|  test  | 1000 |  2000  |   4000   |
+|  val   |  0   |   0    |    0     |
++--------+------+--------+----------+
+2024-01-09 09:09:41,451 IRRA.model INFO: Load pretrained ViT-B/16 CLIP model with model config: {'embed_dim': 512, 'image_resolution': [384, 128], 'vision_layers': 12, 'vision_width': 768, 'vision_patch_size': 16, 'context_length': 77, 'vocab_size': 49408, 'transformer_width': 512, 'transformer_heads': 8, 'transformer_layers': 12, 'stride_size': 16}
+2024-01-09 09:09:44,285 IRRA.test INFO: Enter inferencing
+2024-01-09 09:09:54,051 IRRA.eval INFO: 
++------+--------+--------+--------+--------+--------+
+| task |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++------+--------+--------+--------+--------+--------+
+| t2i  | 50.600 | 77.650 | 85.525 | 56.082 | 49.663 |
++------+--------+--------+--------+--------+--------+
+2024-01-09 09:17:12,312 IRRA INFO: {'MLM': True, 'alpha': 0.9, 'batch_size': 64, 'beta': 0.999, 'bias_lr_factor': 2.0, 'cmt_depth': 4, 'dataset_name': 'VN3K', 'distributed': False, 'eval_period': 1, 'gamma': 0.1, 'id_loss_weight': 1.0, 'img_aug': True, 'img_size': [384, 128], 'local_rank': 0, 'log_period': 100, 'loss_names': 'sdm+mlm+id', 'lr': 1e-05, 'lr_factor': 5.0, 'lrscheduler': 'cosine', 'masked_token_rate': 0.8, 'masked_token_unchanged_rate': 0.1, 'milestones': [20, 50], 'mlm_loss_weight': 1.0, 'momentum': 0.9, 'name': 'iira', 'num_epoch': 60, 'num_instance': 4, 'num_workers': 8, 'optimizer': 'Adam', 'output_dir': 'best', 'power': 0.9, 'pretrain_choice': 'ViT-B/16', 'resume': False, 'resume_ckpt_file': '', 'root_dir': '.', 'sampler': 'random', 'stride_size': 16, 'target_lr': 0, 'temperature': 0.02, 'test_batch_size': 512, 'text_length': 77, 'training': False, 'val_dataset': 'test', 'vocab_size': 49408, 'warmup_epochs': 5, 'warmup_factor': 0.1, 'warmup_method': 'linear', 'weight_decay': 4e-05, 'weight_decay_bias': 0.0}
+2024-01-09 09:17:12,381 IRRA.dataset INFO: => VN3K Images and Captions are loaded
+2024-01-09 09:17:12,382 IRRA.dataset INFO: VN3K Dataset statistics:
+2024-01-09 09:17:12,382 IRRA.dataset INFO: 
++--------+------+--------+----------+
+| subset | ids  | images | captions |
++--------+------+--------+----------+
+| train  | 2000 |  4302  |   8604   |
+|  test  | 1000 |  2000  |   4000   |
+|  val   |  0   |   0    |    0     |
++--------+------+--------+----------+
+2024-01-09 09:17:13,458 IRRA.model INFO: Load pretrained ViT-B/16 CLIP model with model config: {'embed_dim': 512, 'image_resolution': [384, 128], 'vision_layers': 12, 'vision_width': 768, 'vision_patch_size': 16, 'context_length': 77, 'vocab_size': 49408, 'transformer_width': 512, 'transformer_heads': 8, 'transformer_layers': 12, 'stride_size': 16}
+2024-01-09 09:20:01,738 IRRA INFO: {'MLM': True, 'alpha': 0.9, 'batch_size': 64, 'beta': 0.999, 'bias_lr_factor': 2.0, 'cmt_depth': 4, 'dataset_name': 'VN3K', 'distributed': False, 'eval_period': 1, 'gamma': 0.1, 'id_loss_weight': 1.0, 'img_aug': True, 'img_size': [384, 128], 'local_rank': 0, 'log_period': 100, 'loss_names': 'sdm+mlm+id', 'lr': 1e-05, 'lr_factor': 5.0, 'lrscheduler': 'cosine', 'masked_token_rate': 0.8, 'masked_token_unchanged_rate': 0.1, 'milestones': [20, 50], 'mlm_loss_weight': 1.0, 'momentum': 0.9, 'name': 'iira', 'num_epoch': 60, 'num_instance': 4, 'num_workers': 8, 'optimizer': 'Adam', 'output_dir': 'best', 'power': 0.9, 'pretrain_choice': 'ViT-B/16', 'resume': False, 'resume_ckpt_file': '', 'root_dir': '.', 'sampler': 'random', 'stride_size': 16, 'target_lr': 0, 'temperature': 0.02, 'test_batch_size': 512, 'text_length': 77, 'training': False, 'val_dataset': 'test', 'vocab_size': 49408, 'warmup_epochs': 5, 'warmup_factor': 0.1, 'warmup_method': 'linear', 'weight_decay': 4e-05, 'weight_decay_bias': 0.0}
+2024-01-09 09:20:01,803 IRRA.dataset INFO: => VN3K Images and Captions are loaded
+2024-01-09 09:20:01,803 IRRA.dataset INFO: VN3K Dataset statistics:
+2024-01-09 09:20:01,803 IRRA.dataset INFO: 
++--------+------+--------+----------+
+| subset | ids  | images | captions |
++--------+------+--------+----------+
+| train  | 2000 |  4302  |   8604   |
+|  test  | 1000 |  2000  |   4000   |
+|  val   |  0   |   0    |    0     |
++--------+------+--------+----------+
+2024-01-09 09:20:02,882 IRRA.model INFO: Load pretrained ViT-B/16 CLIP model with model config: {'embed_dim': 512, 'image_resolution': [384, 128], 'vision_layers': 12, 'vision_width': 768, 'vision_patch_size': 16, 'context_length': 77, 'vocab_size': 49408, 'transformer_width': 512, 'transformer_heads': 8, 'transformer_layers': 12, 'stride_size': 16}
+2024-01-09 09:20:05,109 IRRA.test INFO: Enter inferencing

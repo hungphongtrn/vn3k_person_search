@@ -25,7 +25,7 @@ if __name__ == '__main__':
     args.training = False
     logger = setup_logger('IRRA', save_dir=args.output_dir, if_train=args.training)
     logger.info(args)
-    device = "cuda"
+    device = "cpu"
 
     test_img_loader, test_txt_loader, num_classes = build_dataloader(args)
     model = build_model(args, num_classes=num_classes)
